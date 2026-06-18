@@ -6,7 +6,7 @@
     <RouterView />
   
 
- <Footer/>
+
 </template>
 
 <script setup>

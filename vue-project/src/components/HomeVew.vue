@@ -1,7 +1,6 @@
-<script setup lang="ts">
-import CodeWindow from './CodeWindow.vue';
 
-</script>
+
+
 
 <template>
     <section id="home" class="relative mx-auto max-w-6xl px-4 pt-32 pb-12 md:pt-40">
@@ -37,26 +36,28 @@ import CodeWindow from './CodeWindow.vue';
               asChild
             >
               <a href="#projects">
-                View My Projects
-                <ArrowRight class="ml-1 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+               <Buttton>View My Projects <ArrowRight class="ml-1 h-4 w-4 transition-transform group-hover:translate-x-0.5" /></Buttton> 
+                
               </a>
             </Button>
-            <Button size="lg" variant="outline" class="rounded-full border-border bg-transparent">
-              <Download class="mr-1 h-4 w-4" />
+            
+              <Buttton :status="isPrimary" size="lg" variant="outline" class="flex items-center gap-2 rounded-full border-border bg-transparent">
               Download CV
-            </Button>
+              <Download class="mr-1 h-4 w-4" />
+            </Buttton> 
+            
           </div>
-
+ <!-- This is a symbols in a circle -->
           <div class="mt-8 flex items-center gap-2">
-            <a v-for="i in 3"
-                key={label}
-                href="#"
-                aria-label={label}
-                class="grid h-10 w-10 place-items-center rounded-full border border-border bg-card text-muted-foreground transition-all hover:-translate-y-0.5 hover:text-foreground hover:shadow-md"
-              >
-                <Icon class="h-4 w-4" />
-              </a>
-          
+            <a v-for="SocialMedia in SocialMedias" :key="SocialMedia.name " :href="SocialMedia.href"
+            class="grid h-10 w-10 place-items-center rounded-full border border-gray-400 border-border bg-card text-muted-foreground transition-all hover:-translate-y-0.5 hover:text-foreground hover:shadow-md"
+              >  
+                <img 
+                :src="SocialMedia.link" 
+                :alt="SocialMedia.name "
+                class="h-5 w-5  "
+                >
+              </a >        
           </div>
         </Reveal>
 
@@ -74,7 +75,7 @@ import CodeWindow from './CodeWindow.vue';
                 </div>
                 <div  class="flex font-mono text-[12.5px] leading-relaxed md:text-[13px]">
                     <div class="select-none border-r border-white/5 px-3 py-4 text-right text-[#3b4261]">
-                        <div v-for="i in 18" :key="i">{{ i }}
+                        <div v-for="i in 19" :key="i">{{ i }}
                             </div>
                     </div>
                      
@@ -85,15 +86,15 @@ import CodeWindow from './CodeWindow.vue';
           </div>
 
           <aside class="w-full shrink-0 rounded-2xl border border-border bg-card p-5 shadow-sm sm:w-52 lg:w-56">
-            <p class="text-xs font-medium uppercase tracking-wider text-muted-foreground">Developer</p>
+            <p class="text-xs font-medium uppercase tracking-wider  text-gray-500">Developer</p>
             <p class="mt-1 text-sm font-semibold text-foreground">Quick stats</p>
             <dl class="mt-4 flex flex-col gap-3.5">
-              
-                <div key={s.label} class="flex flex-col gap-0.5 border-b border-border/60 pb-3 last:border-0 last:pb-0">
-                  <dt class="text-xs text-muted-foreground">{s.label}</dt>
-                  <dd class="text-sm font-medium text-foreground">{s.value}</dd>
+                   <!-- have to Repite --> 
+                <div v-for="s in STATS" :key="s.label" class="flex flex-col gap-0.5 border-b border-gray-300 border-border/90 pb-3 last:border-0 last:pb-0">
+                  <dt class="text-xs text-gray-500 font-sans ">{{s.label}}</dt>
+                  <dd class="text-sm  ">{{s.value}}</dd>
                 </div>
-             
+             <!-- have to Repite --> 
             </dl>
           </aside>
         </Reveal>
@@ -101,3 +102,35 @@ import CodeWindow from './CodeWindow.vue';
     </section>
     
 </template>
+
+<script setup >
+import Buttton from './Buttton.vue';
+import CodeWindow from './CodeWindow.vue';
+import { ref } from 'vue';
+import { ArrowRight, Download } from 'lucide-vue-next'
+
+const isPrimary = ref(false);
+const SocialMedias = [{ 
+  name: "Github", 
+  link: 'logos/github-Gray.svg',
+  href: "https://github.com/1D-A-N-T-E",
+},
+{
+  name: "Linkedin", 
+  link: 'logos/linkedin.svg',
+  href: "https://github.com/1D-A-N-T-E",
+},
+{
+  name: "Email", 
+  link: 'logos/Email.svg',
+  href: "https://github.com/1D-A-N-T-E",
+}
+ ];
+const STATS = [
+  { label: "Location", value: "Riga, Latvia" },
+  { label: "Current Focus", value: "Vue.js" },
+  { label: "Projects Built", value: "12+" },
+  { label: "Coffee Level", value: "Maximum" },
+  { label: "Technologies", value: "20+" },
+]
+</script>

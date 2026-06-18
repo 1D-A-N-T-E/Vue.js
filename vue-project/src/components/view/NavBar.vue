@@ -6,28 +6,24 @@
     px-6 py-4 rounded-full border  transition-all duration-300">
 
         <!-- Logo -->
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-3 ro ">
             <img 
-                src="../../../public/logos/zirgsMelnsLogo.png"
-                class="h-20 w-auto"
+                src="../../../public/logos/OriginalDragon.svg"
+                class="h-15 w-auto rounded-full "
             />
-
-            <span class="font-bold">
-                Mārcis Graudiņš
-            </span>
         </div>
 
         <!-- Menu -->
         <ul class="flex gap-8">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Team</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a :class="NavBarButton"  href="#">Home</a></li>
+            <li><a :class="NavBarButton"  href="#">Team</a></li>
+            <li><a :class="NavBarButton"  href="#">Contact</a></li>
         </ul>
 
         <!-- Buttons -->
         <div class="flex gap-2">
-            <button>Login</button>
-            <Bottton/>
+           <Buttton :status="isPrimary" >Login</Buttton> 
+            <Buttton>Sign Up</Buttton>
         </div>
 
     </nav>
@@ -36,7 +32,9 @@
 
 <script setup>
 import { ref } from 'vue'
-import Bottton from '../Bottton.vue';
+import Buttton from '../Buttton.vue';
 
+const isPrimary = ref(false);
+ const NavBarButton = 'bg-white text-black border border-gray-300 hover:bg-gray-50 hover:text-black hover:border-gray-400 font-medium px-4 py-2 rounded-full transition-all duration-200'
 </script>
 
