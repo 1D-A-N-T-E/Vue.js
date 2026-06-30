@@ -3,7 +3,7 @@
 
 <header class="fixed inset-x-0 top-0 z-50  px-4 pt-4 " >
     <nav class="max-w-7xl mx-auto flex items-center bg-white/30 backdrop-blur-sm  justify-between 
-    px-6 py-4 rounded-full border  transition-all duration-300">
+    px-6 py-4 rounded-full border  border-gray-300  transition-all duration-300">
 
         <!-- Logo -->
         <div class="flex items-center gap-3 ro ">

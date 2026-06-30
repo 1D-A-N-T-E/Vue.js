@@ -1,14 +1,14 @@
 <template>
     <section id="skills" class="relative mx-auto max-w-6xl px-4 py-20 md:py-28">
         <div class="reveal is-visible mx-auto mb-12 max-w-2xl text-center" style="transition-delay:0ms">
-            <span class="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-muted-foreground">
+            <span class="inline-flex items-center gap-2 rounded-full border border-border border-gray-300 bg-card px-3 py-1 text-gray-500 text-xs font-medium text-muted-foreground">
               <Sparkles class="lucide lucide-sparkles h-3.5 w-3.5 text-lime-400"/>Knowledge Tree</span>
               
             <h2 class="mt-4 text-balance text-3xl font-semibold tracking-tight text-foreground md:text-4xl">A connected ecosystem of technologies</h2>
-            <p class="mt-3 text-pretty text-muted-foreground">Explore the stack that powers my work. Tap any orb to reveal its branches and proficiency.</p>
+            <p class="mt-3 text-pretty text-muted-foreground  text-gray-500">Explore the stack that powers my work. Tap any orb to reveal its branches and proficiency.</p>
         </div>
         <div class="reveal is-visible relative" style="transition-delay:0ms">
-            <div class="relative overflow-hidden rounded-4xl border border-border bg-linear-to-b from-card to-background p-2 shadow-[0_30px_80px_-40px_rgba(0,0,0,0.25)]">
+            <div class="relative overflow-hidden rounded-4xl border border-border  border-gray-300  bg-linear-to-b from-card to-background p-2 shadow-[0_30px_80px_-40px_rgba(0,0,0,0.25)]">
                 <div class="pointer-events-none absolute inset-0 opacity-[0.4]" 
                     style="background-image:radial-gradient(circle, rgb(0 0 0 / 0.05) 1px, transparent 1px);background-size:26px 26px" aria-hidden="true">
 
@@ -73,8 +73,8 @@
                             </svg>
                         <button class="group absolute z-20 -translate-x-1/2 -translate-y-1/2  bg-white/90 backdrop-blur-none" 
                             style="left:50%;top:50%" aria-label="Programming core">
-                            <span class="absolute inset-0 -z-10 rounded-full bg-lime/30 blur-2xl animate-[pulse-glow_4s_ease-in-out_infinite]" />
-                                <span class="glass grid h-24 w-24 place-items-center rounded-full border border-lime/40 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)] ring-1 ring-white/40 transition-transform duration-300 group-hover:scale-105 md:h-28 md:w-28">
+                            <span class="absolute inset-0 -z-10 rounded-full bg-lime-100/30 blur-2xl animate-[pulse-glow_4s_ease-in-out_infinite]" />
+                                <span class="glass grid h-24 w-24 place-items-center rounded-full border border-gray-300 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)] ring-1 ring-white/40 transition-transform duration-300 group-hover:scale-105 md:h-28 md:w-28">
                                     <span class="flex flex-col items-center gap-1">
                                     <span class="grid h-9 w-9 place-items-center rounded-full bg-foreground bg-black text-background">
                                         <span class="font-mono text-xs text-amber-50 font-bold">{{ "</>" }}</span>
@@ -91,7 +91,7 @@
                                         left: getPosition(index, TECHS.length).left + '%',
                                         top: getPosition(index, TECHS.length).top + '%'
                                     }"  :aria-pressed="false">
-                            <span class="glass flex flex-col items-center justify-center gap-1 rounded-full border shadow-md ring-1 ring-white/40 transition-all duration-300 h-16 w-16 
+                            <span class="glass flex flex-col items-center justify-center gap-1 rounded-full border border-gray-300 shadow-md ring-1 ring-white/40 transition-all duration-300 h-16 w-16 
                             border-border group-hover:-translate-y-1 group-hover:border-lime/40 group-hover:shadow-lg md:h-18 md:w-18">
                             <img class="h-6 w-6 md:h-7 md:w-7" width="28" height="28" loading="lazy" :src="`../../../../public/logos/ProgrammLogos/${T.id}.svg`" 
                             :alt="T.slug"> </span>

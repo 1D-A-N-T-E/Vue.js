@@ -8,7 +8,7 @@
       <div class="grid items-center gap-12 lg:grid-cols-[1.05fr_1fr]">
         
         <Reveal class="flex flex-col items-start">
-          <span class="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1.5 text-xs font-medium text-foreground shadow-sm">
+          <span class="inline-flex items-center gap-2 rounded-full border border-border border-gray-300 bg-card px-3 py-1.5 text-xs font-medium text-foreground shadow-sm">
             <span class="relative flex h-2 w-2">
               <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-lime-700 opacity-75" />
               <span class="relative inline-flex h-2 w-2 rounded-full bg-lime-400" />
@@ -25,7 +25,7 @@
             .
           </h1>
 
-          <p class="mt-6 max-w-md text-pretty text-base leading-relaxed text-muted-foreground">
+          <p class="mt-6 max-w-md text-pretty text-base text-gray-800/60 leading-relaxed text-muted-foreground">
             Frontend Developer focused on Vue.js and building clean, user-friendly applications with great
             performance.
           </p>
@@ -123,6 +123,7 @@
   <RoadMap/>
   <Projects/>
   <Contact/>
+  <SiteFooter/>
 </template>
 
 <script setup >
@@ -134,6 +135,7 @@ import SkillTree from './SkillTree.vue';
 import RoadMap from './RoadMap.vue';
 import Projects from './Projects.vue';
 import Contact from './Contact.vue';
+import SiteFooter from './SiteFooter.vue';
 
 const isPrimary = ref(false);
 const SocialMedias = [{ 

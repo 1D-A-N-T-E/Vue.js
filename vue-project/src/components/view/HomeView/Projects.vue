@@ -13,7 +13,7 @@
 
             <article 
               v-for="PROJECT in PROJECTS"
-              class="reveal is-visible group flex flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-lime/40 hover:shadow-xl"
+              class="reveal is-visible group flex flex-col rounded-2xl border border-border border-gray-300 bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-lime-400/40 hover:shadow-xl"
               style="transition-delay:0ms">
               <div class="flex items-start justify-between">
                 <span class="grid h-12 w-12 place-items-center rounded-xl bg-lime-500/15  text-foreground transition-colors group-hover:bg-lime-500/25">
