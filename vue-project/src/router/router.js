@@ -1,6 +1,6 @@
 // router.js vai main.js
 import { createWebHistory, createRouter } from 'vue-router'
-import HomeView from '../components/HomeVew.vue'
+import HomeView from '../components/view/HomeView/HomeVew.vue'
 import AboutView from '../components/AboutView.vue'
 
 const routes = [

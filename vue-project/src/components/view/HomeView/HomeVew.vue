@@ -3,14 +3,15 @@
 
 
 <template>
+  <main class="min-h-screen bg-background">
     <section id="home" class="relative mx-auto max-w-6xl px-4 pt-32 pb-12 md:pt-40">
       <div class="grid items-center gap-12 lg:grid-cols-[1.05fr_1fr]">
         
         <Reveal class="flex flex-col items-start">
           <span class="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1.5 text-xs font-medium text-foreground shadow-sm">
             <span class="relative flex h-2 w-2">
-              <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-lime opacity-75" />
-              <span class="relative inline-flex h-2 w-2 rounded-full bg-lime" />
+              <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-lime-700 opacity-75" />
+              <span class="relative inline-flex h-2 w-2 rounded-full bg-lime-400" />
             </span>
             Available for work
           </span>
@@ -19,7 +20,7 @@
             Building fast, modern and scalable
             <span class="relative whitespace-nowrap">
               <span class="relative z-10">web applications</span>
-              <span class="absolute inset-x-0 bottom-1 z-0 h-3 bg-lime/60 md:h-4" />
+              <span class="absolute inset-x-0 bottom-1 z-0 h-3 bg-lime-500/60 md:h-4" />
             </span>
             .
           </h1>
@@ -100,14 +101,39 @@
         </Reveal>
       </div>
     </section>
-    
+     <!--it is 4 blocks with a information  --> 
+        <section className="mx-auto max-w-6xl px-4 py-12">
+      <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+        
+          <div v-for="s in informations"
+            :key="s.label"
+            className="rounded-2xl border border-gray-400 border-border bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
+          >
+            <p className="text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
+              {{s.value}}
+            </p>
+            <p className="mt-2 text-sm  text-gray-500 text-muted-foreground">{{s.label}}</p>
+          </div>
+      
+      </div>
+    </section>
+  </main>
+
+  <SkillTree/>
+  <RoadMap/>
+  <Projects/>
+  <Contact/>
 </template>
 
 <script setup >
-import Buttton from './Buttton.vue';
+import Buttton from '../../../components/Buttton.vue';
 import CodeWindow from './CodeWindow.vue';
 import { ref } from 'vue';
 import { ArrowRight, Download } from 'lucide-vue-next'
+import SkillTree from './SkillTree.vue';
+import RoadMap from './RoadMap.vue';
+import Projects from './Projects.vue';
+import Contact from './Contact.vue';
 
 const isPrimary = ref(false);
 const SocialMedias = [{ 
@@ -132,5 +158,11 @@ const STATS = [
   { label: "Projects Built", value: "12+" },
   { label: "Coffee Level", value: "Maximum" },
   { label: "Technologies", value: "20+" },
+]
+const informations = [
+  { value: "2+", label: "Years Experience" },
+  { value: "12+", label: "Projects Built" },
+  { value: "20+", label: "Technologies" },
+  { value: "1200+", label: "Lines of Code" },
 ]
 </script>
