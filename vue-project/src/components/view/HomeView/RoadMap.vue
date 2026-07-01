@@ -1,5 +1,5 @@
 <template>
-    <section id="roadmap" class="mx-auto max-w-6xl px-4 py-16">
+    <section  class="mx-auto max-w-6xl px-4 py-16">
         <div class="grid gap-6 md:grid-cols-2">
             <div class="reveal is-visible rounded-2xl border border-border  border-gray-300  bg-card p-7 shadow-sm" style="transition-delay:0ms">
                 <h3 class="text-lg font-semibold tracking-tight text-foreground">Currently Learning</h3>

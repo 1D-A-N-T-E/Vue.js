@@ -1,5 +1,5 @@
 <template>
-    <section id="about" class="mx-auto max-w-6xl px-4 py-20 md:py-28">
+    <section id="Contact" class="mx-auto max-w-6xl px-4 py-20 md:py-28">
       <div class="grid gap-10 rounded-4xl border border-border  border-gray-300  bg-card p-7 shadow-sm md:grid-cols-[0.9fr_1.1fr] md:p-12">
         <div class="reveal is-visible" style="transition-delay:0ms">
           <h2 class="text-balance text-3xl font-semibold tracking-tight text-foreground md:text-4xl">

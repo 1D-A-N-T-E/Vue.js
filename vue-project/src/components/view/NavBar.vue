@@ -16,8 +16,10 @@
         <!-- Menu -->
         <ul class="flex gap-8">
             <li><a :class="NavBarButton"  href="#">Home</a></li>
-            <li><a :class="NavBarButton"  href="#">Team</a></li>
-            <li><a :class="NavBarButton"  href="#">Contact</a></li>
+            <li><a :class="NavBarButton"  href="#Roadmap">Road Map</a></li>
+            <li><a :class="NavBarButton"  href="#Tree">Knowledge Tree</a></li>
+            <li><a :class="NavBarButton"  href="#Projects">Projects</a></li>
+            <li><a :class="NavBarButton"  href="#Contact">Contact</a></li>
         </ul>
 
         <!-- Buttons -->

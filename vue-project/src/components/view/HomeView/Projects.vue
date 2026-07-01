@@ -1,5 +1,5 @@
 <template>
-    <section id="projects" class="mx-auto max-w-6xl px-4 py-20 md:py-28">
+    <section id="Projects" class="mx-auto max-w-6xl px-4 py-20 md:py-28">
       <div class="reveal is-visible mb-12 max-w-2xl" style="transition-delay:0ms">
         <h2 class="text-balance text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
           My API Projects

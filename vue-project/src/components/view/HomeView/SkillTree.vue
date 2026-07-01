@@ -1,5 +1,5 @@
 <template>
-    <section id="skills" class="relative mx-auto max-w-6xl px-4 py-20 md:py-28">
+    <section id="Tree" class="relative mx-auto max-w-6xl px-4 py-20 md:py-28">
         <div class="reveal is-visible mx-auto mb-12 max-w-2xl text-center" style="transition-delay:0ms">
             <span class="inline-flex items-center gap-2 rounded-full border border-border border-gray-300 bg-card px-3 py-1 text-gray-500 text-xs font-medium text-muted-foreground">
               <Sparkles class="lucide lucide-sparkles h-3.5 w-3.5 text-lime-400"/>Knowledge Tree</span>
@@ -132,7 +132,7 @@
       </template>
                     </div>
                       
-                    <div class="pointer-events-none absolute bottom-4 left-4 right-4 z-30 md:left-6 md:right-auto md:w-72">
+                    <div id="Roadmap" class="pointer-events-none absolute bottom-4 left-4 right-4 z-30 md:left-6 md:right-auto md:w-72">
                         
                     </div>
             </div>

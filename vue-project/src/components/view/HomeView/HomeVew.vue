@@ -21,8 +21,7 @@
             <span class="relative whitespace-nowrap">
               <span class="relative z-10">web applications</span>
               <span class="absolute inset-x-0 bottom-1 z-0 h-3 bg-lime-500/60 md:h-4" />
-            </span>
-            .
+            </span>.
           </h1>
 
           <p class="mt-6 max-w-md text-pretty text-base text-gray-800/60 leading-relaxed text-muted-foreground">
@@ -36,17 +35,18 @@
               class="group rounded-full bg-foreground text-background hover:bg-foreground/90"
               asChild
             >
-              <a href="#projects">
+              <a href="#Projects">
                <Buttton>View My Projects <ArrowRight class="ml-1 h-4 w-4 transition-transform group-hover:translate-x-0.5" /></Buttton> 
                 
               </a>
             </Button>
             
+            <a href="/Documents/CVMārcisGraudiņšLU.pdf" download="CVMārcisGraudiņšLU.pdf" type="application/pdf">
               <Buttton :status="isPrimary" size="lg" variant="outline" class="flex items-center gap-2 rounded-full border-border bg-transparent">
               Download CV
               <Download class="mr-1 h-4 w-4" />
             </Buttton> 
-            
+            </a>
           </div>
  <!-- This is a symbols in a circle -->
           <div class="mt-8 flex items-center gap-2">
@@ -65,7 +65,7 @@
       <!-- This is a black terminal -->
         <Reveal delay={120} class="flex flex-col gap-4 sm:flex-row lg:flex-row">
           <div class="min-w-0 flex-1 animate-[float-y_7s_ease-in-out_infinite] ">
-            <div class="overflow-hidden rounded-2xl border border-white/10 bg-[#1a1b26] 
+            <div class="overflow-hidden rounded-2xl border border-white-500/10 bg-[#1a1b26] 
             shadow-[0_30px_80px_-20px_rgba(0,0,0,0.5)] ring-1 ring-black/5">
                 <div class="flex items-center gap-2 border-b border-white/5 bg-[#16161e] px-4 py-3">
                     <span class="h-3 w-3 rounded-full bg-[#ff5f57]"></span>
@@ -86,7 +86,7 @@
             </div>
           </div>
 
-          <aside class="w-full shrink-0 rounded-2xl border border-border bg-card p-5 shadow-sm sm:w-52 lg:w-56">
+          <aside class="w-full shrink-0 rounded-2xl border border-border border-gray-300 bg-card p-5 shadow-sm sm:w-52 lg:w-56">
             <p class="text-xs font-medium uppercase tracking-wider  text-gray-500">Developer</p>
             <p class="mt-1 text-sm font-semibold text-foreground">Quick stats</p>
             <dl class="mt-4 flex flex-col gap-3.5">
@@ -120,10 +120,12 @@
   </main>
 
   <SkillTree/>
+  <Terminal/>
   <RoadMap/>
   <Projects/>
   <Contact/>
   <SiteFooter/>
+ 
 </template>
 
 <script setup >
@@ -136,6 +138,7 @@ import RoadMap from './RoadMap.vue';
 import Projects from './Projects.vue';
 import Contact from './Contact.vue';
 import SiteFooter from './SiteFooter.vue';
+import Terminal from './Terminal.vue';
 
 const isPrimary = ref(false);
 const SocialMedias = [{ 
