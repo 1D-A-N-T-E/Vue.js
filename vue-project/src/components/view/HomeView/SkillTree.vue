@@ -182,107 +182,50 @@
 }
 </style>
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { Sparkles } from 'lucide-vue-next'
+import axios from 'axios';
+import {useHomePage} from "@/Api/Composable/useHomePage.js"
+
+
 const selectedIndex = ref(null)
 function ShowChilde(index){
    selectedIndex.value = index
 }
+//Pieprasam no servera datus 
+  const TECHS = ref([]);
+  const error = ref(null);
 
 
+onMounted ( async () => {
+   const data = await useHomePage('/Tech')
+    TECHS.value = data
+})
+/*
+  async function fetchData() {
+    try {
+      const response = await axios.get('https://ab6ac4190cdd9555.mokky.dev/Tech');
+      TECHS.value= response.data;
 
-const TECHS = [
-  {
-    id: "html",
-    name: "HTML",
-    slug: "html5",
-    proficiency: 96,
-    blurb: "Semantic, accessible markup as the foundation of every interface.",
-    children: ["Semantics", "A11y", "Forms", "SEO"],
-  },
-  {
-    id: "css",
-    name: "CSS",
-    slug: "css",
-    proficiency: 93,
-    blurb: "Modern layouts with Grid, Flexbox, container queries and design tokens.",
-    children: ["Flexbox", "Grid", "Animations", "Tailwind"],
-  },
-  {
-    id: "javascript",
-    name: "JavaScript",
-    slug: "javascript",
-    proficiency: 91,
-    blurb: "Core language fluency — async, modules and the modern ES toolchain.",
-    children: ["ES2024", "Async", "DOM", "Modules"],
-  },
-  {
-    id: "vue",
-    name: "Vue.js",
-    slug: "vuedotjs",
-    proficiency: 88,
-    blurb: "My primary framework — reactive, composable and a joy to scale.",
-    children: ["Pinia", "Vue Router", "Composition API", "Lifecycle Hooks", "Axios", "Directives"],
-  },
-  {
-    id: "react",
-    name: "React",
-    slug: "react",
-    proficiency: 78,
-    blurb: "Component-driven UI with hooks, context and the modern RSC model.",
-    children: ["Hooks", "Context", "Next.js", "RSC"],
-  },
-  {
-    id: "mysql",
-    name: "MySQL",
-    slug: "mysql",
-    proficiency: 74,
-    blurb: "Relational data modelling, indexing and query optimisation.",
-    children: ["Schemas", "Joins", "Indexing", "Queries"],
-  },
-  {
-    id: "linux",
-    name: "Linux",
-    slug: "linux",
-    proficiency: 82,
-    blurb: "Comfortable on the shell — system administration and automation.",
-    children: ["Bash", "Cron", "Permissions", "Networking"],
-  },
-  {
-    id: "git",
-    name: "Git",
-    slug: "git",
-    proficiency: 90,
-    blurb: "Disciplined version control with clean, reviewable history.",
-    children: ["Branching", "Rebase", "Hooks", "Tags"],
-  },
-  {
-    id: "github",
-    name: "GitHub",
-    slug: "github",
-    proficiency: 88,
-    blurb: "Collaboration, automation and CI/CD with GitHub Actions.",
-    children: ["Actions", "PRs", "Pages", "Packages"],
-  },
-  {
-    id: "docker",
-    name: "Docker",
-    slug: "docker",
-    proficiency: 71,
-    blurb: "Reproducible environments with containers and multi-stage builds.",
-    children: ["Images", "Compose", "Volumes", "Networks"],
-  },
-  {
-    id: "kubernetes",
-    name: "Kubernetes",
-    slug: "kubernetes",
-    proficiency: 56,
-    blurb: "Orchestrating containers — deployments, services and scaling.",
-    children: ["Pods", "Deployments", "Services", "Helm"],
-  },
-]
+       if (response.status !== 200) {
+      throw new Error(`Servera kļūda: ${response.status}`);
+    }
+    
+    // 5. Saglabājam datus
+    TECHS.value = response.data;
+    console.log('Iegūtie dati:', TECHS.value);
+    
+  } catch (err) {
+    // 6. Kļūdu apstrāde
+    error.value = err.message || 'Neizdevās ielādēt datus';
+    console.error('Kļūda:', err);
+    } 
+  }
 
-
+  onMounted( () => {
+  fetchData();
+})
+*/
 function getPosition(index, total) {
 
   const angle =

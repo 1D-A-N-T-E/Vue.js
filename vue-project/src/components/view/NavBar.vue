@@ -24,17 +24,29 @@
 
         <!-- Buttons -->
         <div class="flex gap-2">
-           <Buttton :status="isPrimary" >Login</Buttton> 
+           <Buttton @click="ShowComponent" :status="isPrimary" >Login</Buttton> 
             <Buttton>Sign Up</Buttton>
         </div>
 
     </nav>
 </header>
+
+ <RegistrationForm @close-registration="CloseComponent" v-if="show" />
 </template>
 
 <script setup>
 import { ref } from 'vue'
 import Buttton from '../Buttton.vue';
+import RegistrationForm from './HomeView/RegistrationForm.vue'
+
+const show = ref(false);
+
+function ShowComponent () {
+  show.value=true
+}
+function CloseComponent () {
+  show.value=false
+}
 
 const isPrimary = ref(false);
  const NavBarButton = 'bg-white text-black border border-gray-300 hover:bg-gray-50 hover:text-black hover:border-gray-400 font-medium px-4 py-2 rounded-full transition-all duration-200'

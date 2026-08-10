@@ -119,11 +119,13 @@
     </section>
   </main>
 
+ 
   <SkillTree/>
   <Terminal/>
   <RoadMap/>
   <Projects/>
   <Contact/>
+  <ChatBot/>
   <SiteFooter/>
  
 </template>
@@ -139,6 +141,9 @@ import Projects from './Projects.vue';
 import Contact from './Contact.vue';
 import SiteFooter from './SiteFooter.vue';
 import Terminal from './Terminal.vue';
+import ChatBot from './ChatBot.vue';
+import RegistrationForm from './RegistrationForm.vue';
+
 
 const isPrimary = ref(false);
 const SocialMedias = [{ 
@@ -170,4 +175,5 @@ const informations = [
   { value: "20+", label: "Technologies" },
   { value: "1200+", label: "Lines of Code" },
 ]
+
 </script>
