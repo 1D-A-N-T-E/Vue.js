@@ -8,7 +8,7 @@
         <!-- Logo -->
         <div class="flex items-center gap-3 ro ">
             <img 
-                src="../../../public/logos/OriginalDragon.svg"
+                src="../../../../public/logos/OriginalDragon.svg"
                 class="h-15 w-auto rounded-full "
             />
         </div>
@@ -36,8 +36,8 @@
 
 <script setup>
 import { ref } from 'vue'
-import Buttton from '../Buttton.vue';
-import RegistrationForm from './HomeView/RegistrationForm.vue'
+import Buttton from '../../Buttton.vue';
+import RegistrationForm from './RegistrationForm.vue'
 
 const show = ref(false);
 

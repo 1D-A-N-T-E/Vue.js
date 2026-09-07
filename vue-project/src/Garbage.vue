@@ -1,6 +1,6 @@
 <script setup>
 import { reactive, ref, computed, onMounted, watchEffect  } from 'vue';
-import NavBar from './components/view/NavBar.vue/index.js';
+import NavBar from './components/view/HomeView/NavBar.vue/index.js';
 import Footer from './components/view/Footer.vue/index.js';
 import MainView from './components/MainView.vue';
 import { useRoute, useRouter } from 'vue-router'

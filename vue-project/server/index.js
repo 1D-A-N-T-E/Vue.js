@@ -1,12 +1,11 @@
 
 
-import dotenv from "dotenv";
-
-dotenv.config();
+import "dotenv/config";
 
 import express from "express";
 import cors from "cors";
 import client from "./openai.js";
+import adminRouter from "./AdminPanel/admin.controller.js";
 
 
 const app = express();
@@ -15,6 +14,7 @@ const app = express();
 app.use(cors());
 
 app.use(express.json());
+app.use("/admin", adminRouter);
 
 
 app.post("/chat", async(req,res)=>{

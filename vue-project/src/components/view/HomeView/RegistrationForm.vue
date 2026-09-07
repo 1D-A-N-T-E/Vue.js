@@ -123,17 +123,14 @@
                 <label class="text-sm text-gray-500 mb-2 block">
                     Email
                 </label>
-
                 <input
                     type="email"
                     class="w-full h-12 px-4 rounded-2xl border border-gray-200 bg-gray-50 focus:outline-none focus:border-black transition"
                     placeholder="john@example.com"
                 >
-
             </div>
 
             <div>
-
                 <label class="text-sm text-gray-500 mb-2 block">
                     Password
                 </label>

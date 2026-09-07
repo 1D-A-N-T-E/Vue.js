@@ -1,6 +1,6 @@
 
 <template >
-  <NavBar></NavBar>
+
   
 
     <RouterView />
@@ -10,5 +10,5 @@
 </template>
 
 <script setup>
- import NavBar from '../src/components/view/NavBar.vue';
+ import NavBar from './components/view/HomeView/NavBar.vue';
 </script>

@@ -119,7 +119,7 @@
     </section>
   </main>
 
- 
+ <NavBar/>
   <SkillTree/>
   <Terminal/>
   <RoadMap/>
@@ -143,6 +143,7 @@ import SiteFooter from './SiteFooter.vue';
 import Terminal from './Terminal.vue';
 import ChatBot from './ChatBot.vue';
 import RegistrationForm from './RegistrationForm.vue';
+import NavBar from './NavBar.vue';
 
 
 const isPrimary = ref(false);
